@@ -14,7 +14,7 @@
 
 // type 2
 const asyncHandler = (requestHandler) =>{
-    (res, res, next)=>{
+    return (res, req, next)=>{
         Promise.resolve(requestHandler(res, req, next)).
         catch((error)=>next(error))
     }
